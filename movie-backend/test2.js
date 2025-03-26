@@ -15,6 +15,7 @@ async function fetchMoviesByTitle(letter, year, page = 1) {
         console.log(`🔎 Fetching URL: ${url}`);
 
         const response = await fetch(url);
+        //x
         const data = await response.json();
 
         console.log(`📢 API Response:`, data); // ✅ Debugging
