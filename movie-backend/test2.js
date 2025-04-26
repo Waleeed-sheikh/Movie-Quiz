@@ -3,13 +3,13 @@ import fetch from 'node-fetch';
 import connectDB from './db.js';
 import MovieNames from './collections/MovieNames.js';
 
-// ✅ Connect to MongoDB
+
 connectDB()
 
-// ✅ Function to fetch movies with a given search term
+
 async function fetchMoviesByTitle(letter, year, page = 1) {
     try {
-        const apiKey = '44f64a38'; // Replace with your OMDB API Key
+        const apiKey = '44f64a38'; 
         const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${letter}&y=${year}&type=movie&page=${page}`;
 
         console.log(`🔎 Fetching URL: ${url}`);
@@ -18,7 +18,7 @@ async function fetchMoviesByTitle(letter, year, page = 1) {
         //x
         const data = await response.json();
 
-        console.log(`📢 API Response:`, data); // ✅ Debugging
+        console.log(`📢 API Response:`, data); 
 
         if (data.Error) {
             console.error(`❌ OMDB Error: ${data.Error}`);
@@ -32,7 +32,7 @@ async function fetchMoviesByTitle(letter, year, page = 1) {
     }
 }
 
-// ✅ Function to fetch movies for each letter (A-Z)
+
 async function fetchAndStoreMovies() {
     let moviesFrom1995 = [];
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -40,12 +40,12 @@ async function fetchAndStoreMovies() {
     for (let letter of alphabet) {
         console.log(`🚀 Fetching movies starting with "${letter}" for 1995`);
         
-        for (let page = 1; page <= 3; page++) {  // Adjust pages as needed
+        for (let page = 1; page <= 3; page++) {  
             const movies = await fetchMoviesByTitle(letter, 1995, page);
 
-            if (movies.length === 0) break; // Stop if no more movies
+            if (movies.length === 0) break; 
 
-            // ✅ Fetch detailed movie data (IMDb rating)
+            
             for (let movie of movies) {
                 const detailsUrl = `http://www.omdbapi.com/?apikey=44f64a38&i=${movie.imdbID}`;
                 const detailsResponse = await fetch(detailsUrl);
@@ -59,8 +59,7 @@ async function fetchAndStoreMovies() {
     }
 
     console.log(`✅ Total High-Rated Movies Fetched: ${moviesFrom1995.length}`);
-
-    // ✅ Store in MongoDB
+    
     try {
         if (moviesFrom1995.length > 0) {
             await MovieNames.insertMany(moviesFrom1995);
@@ -75,5 +74,5 @@ async function fetchAndStoreMovies() {
     mongoose.connection.close();
 }
 
-// ✅ Run the function
+
 fetchAndStoreMovies();

@@ -13,24 +13,10 @@ const connectDB = async()=>{
         console.log("MongoDB Connected ✅");
     }
     catch(error){
-        throw new Error("Database connection failed!"); 
+        throw new Error("Database connection failed!",error); 
     }
 };
 
 export default connectDB
 
 
-
-// mongoose.connect(conString);
-
-// const db=mongoose.connection
-
-// db.on("connected",()=>{
-//     console.log("Mongo successfully connected!")
-// })
-
-// db.on("error",(err)=>{
-//     console.error("MongoDB connection ever ❌",err);
-// })
-
-// export default db

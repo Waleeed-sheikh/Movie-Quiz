@@ -194,3 +194,5 @@ export const getQuizQuestionType=()=>{
 
 
 export const getMovieOrDialogue = () => {return Math.random()>0.3?"movie":"dialogue"}
+
+

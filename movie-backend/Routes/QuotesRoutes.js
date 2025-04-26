@@ -4,7 +4,6 @@ import MovieQuote from "../collections/Quote.js"
 
 const router = express.Router();
 
-
 router.get("/waleed/getQuotes",async (req,res)=>{
    
     try{
