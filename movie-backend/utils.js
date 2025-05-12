@@ -149,36 +149,50 @@ export function randomActor(){
 
 export function getARandomMovie(){
 
+    
+
     const famousMovies = [
+        // Cleaned original
         "The Godfather", "The Shawshank Redemption", "Schindler's List", "Forrest Gump",
         "The Dark Knight", "Inception", "Pulp Fiction", "Fight Club", "The Matrix",
         "The Lord of the Rings: The Return of the King", "The Lord of the Rings: The Fellowship of the Ring",
         "The Lord of the Rings: The Two Towers", "Titanic", "Gladiator", "Interstellar",
         "Goodfellas", "Saving Private Ryan", "The Silence of the Lambs", "The Green Mile",
         "Parasite", "Joker", "Se7en", "Django Unchained", "Avengers: Endgame",
-        "Avengers: Infinity War", "The Prestige", "The Departed", "The Lion King (1994)",
-        "Back to the Future", "Star Wars: A New Hope", "Star Wars: The Empire Strikes Back",
-        "Star Wars: Return of the Jedi", "Indiana Jones: Raiders of the Lost Ark",
-        "Indiana Jones: The Last Crusade", "The Grand Budapest Hotel", "Whiplash",
+        "Avengers: Infinity War", "The Prestige", "The Departed", "The Lion King",
+        "Back to the Future", "Star Wars: Episode IV - A New Hope", "Star Wars: Episode V - The Empire Strikes Back",
+        "Star Wars: Episode VI - Return of the Jedi", "Raiders of the Lost Ark",
+        "Indiana Jones and the Last Crusade", "The Grand Budapest Hotel", "Whiplash",
         "A Beautiful Mind", "The Truman Show", "Blade Runner", "Blade Runner 2049",
         "No Country for Old Men", "There Will Be Blood", "12 Angry Men", "Casablanca",
-        "Citizen Kane", "The Shining", "It’s a Wonderful Life", "The Pianist",
-        "One Flew Over the Cuckoo’s Nest", "Spirited Away", "Grave of the Fireflies",
+        "Citizen Kane", "The Shining", "It's a Wonderful Life", "The Pianist",
+        "One Flew Over the Cuckoo's Nest", "Spirited Away", "Grave of the Fireflies",
         "Your Name", "Coco", "Up", "WALL-E", "Finding Nemo", "Ratatouille",
         "Toy Story", "Toy Story 3", "The Incredibles", "The Iron Giant",
-        "Howl’s Moving Castle", "Akira", "The Wolf of Wall Street", "A Clockwork Orange",
+        "Howl's Moving Castle", "Akira", "The Wolf of Wall Street", "A Clockwork Orange",
         "Requiem for a Dream", "The Sixth Sense", "The Social Network", "The Revenant",
-        "Mad Max: Fury Road", "The Hateful Eight", "Kill Bill: Vol. 1",
-        "Kill Bill: Vol. 2", "The Big Lebowski", "Eternal Sunshine of the Spotless Mind",
+        "Mad Max: Fury Road", "The Hateful Eight", "Kill Bill Vol 1",
+        "Kill Bill Vol 2", "The Big Lebowski", "Eternal Sunshine of the Spotless Mind",
         "The Irishman", "Once Upon a Time in Hollywood", "Bohemian Rhapsody",
         "La La Land", "Arrival", "Her", "Prisoners", "Shutter Island",
         "The Girl with the Dragon Tattoo", "Logan", "Deadpool", "Spider-Man: Into the Spider-Verse",
-        "Guardians of the Galaxy", "The Batman (2022)", "Doctor Strange", "Thor: Ragnarok",
-        "John Wick", "John Wick: Chapter 2", "John Wick: Chapter 3 – Parabellum",
+        "Guardians of the Galaxy", "The Batman", "Doctor Strange", "Thor: Ragnarok",
+        "John Wick", "John Wick Chapter 2", "John Wick Chapter 3 Parabellum",
         "Casino Royale", "Skyfall", "The Bourne Identity", "The Bourne Ultimatum",
-        "The Hunt", "Oldboy", "Train to Busan", "The Handmaiden"
+        "The Hunt", "Oldboy", "Train to Busan", "The Handmaiden",
+        "Oppenheimer", "Barbie", "The Whale", "Everything Everywhere All at Once",
+        "The Banshees of Inisherin", "Top Gun Maverick", "Knives Out", "Glass Onion",
+        "The Menu", "1917", "Jojo Rabbit", "Ford v Ferrari", "Tenet",
+        "Minari", "Nomadland", "Sound of Metal", "Encanto", "Soul",
+        "Luca", "Turning Red", "Frozen", "Frozen II", "Moana",
+        "Zootopia", "Big Hero 6", "The Mitchells vs the Machines",
+        "The Lego Movie", "The Secret Life of Walter Mitty", "Ex Machina",
+        "Arrival", "Don’t Look Up", "The Imitation Game", "The Theory of Everything",
+        "The Martian", "Hugo", "The Curious Case of Benjamin Button"
     ];
     
+    
+   
     
     let randomNumber=Math.floor(Math.random()*famousMovies.length)
     return famousMovies[randomNumber]

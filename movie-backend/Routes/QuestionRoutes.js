@@ -6,13 +6,31 @@ import { randomDirector, randomActor, randomYear, getARandomMovie, getQuizQuesti
 
 const questionRouter = express.Router();
 
+
+export async function getValidRandomMovie() {
+    let attempts = 0;
+    while (attempts < 5) {
+        const title = getARandomMovie();
+        const response = await axios.get(`http://www.omdbapi.com/?apikey=44f64a38&t=${encodeURIComponent(title)}`);
+
+        if (response.data && response.data.Response !== "False") {
+            return title;
+        }
+        console.warn("⚠️ Retrying movie fetch due to OMDb miss:", title);
+        attempts++;
+    }
+    throw new Error("No valid movie found after multiple attempts");
+}
+
+
+
 questionRouter.get('/getMovieQuestions', async (req, res) => {
     try {
         const questionType = "movie";
 
         if (questionType === "movie") {
             const movieQuizQuestionType = getQuizQuestionType();
-            const randomMovie = getARandomMovie();
+            const randomMovie = await getValidRandomMovie();
 
             let exsistingQuestion = await Quiz.findOne({ movie: randomMovie, questionType: movieQuizQuestionType });
             if (exsistingQuestion) {

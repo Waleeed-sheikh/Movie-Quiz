@@ -1,0 +1,348 @@
+
+.lobby-container {
+  min-height: 96vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #141414;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 8px;
+  border: solid #9507ce 1px;
+}
+
+
+.lobby-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.lobby-header h1 {
+  margin-bottom: 10px;
+  color: #9507ce;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 45px;
+}
+
+p {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+  color: #9507ce;
+}
+
+
+.top-center-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.action-btn {
+  padding: 7px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  border: 1px solid transparent;
+}
+
+.action-btn:hover {
+  background-color: #9507ce;
+  border: solid black 1px;
+  color: #141414;
+  transform: translateY(-4px);
+  border: 1px solid #141414;
+  border-radius: 7px;
+}
+
+.create-btn {
+  background-color: #141414;
+  color: #9507ce;
+  border: solid #9507ce 1px;
+  margin-right: 10px;
+}
+
+.join-btn {
+  background-color: #141414;
+  border: solid #9507ce 1px;
+  color: #9507ce;
+  margin-left: 5px;
+}
+
+.room-input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #141414;
+  font-weight: 200;
+  width: 250px;
+  font-family: 'Bebas Neue', sans-serif;
+  height: 44px;
+  background-color: #141414;
+  color: #9507ce;
+  border: #9507ce solid 1px;
+  font-size: 1.4rem;
+}
+
+.room-input:focus {
+  border: #141414 solid 2px;
+  outline: none;
+  color: #141414;
+  background-color: #9507ce;
+}
+
+.room-input:focus::placeholder {
+  color: #141414;
+}
+
+
+.error-message {
+  color: red;
+  margin-bottom: 20px;
+  font-weight: 100;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 25px;
+}
+
+
+.grid-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 15px;
+}
+
+
+.content-card {
+  background: #141414;
+  border-radius: 12px;
+  border: #9507ce solid 0.5px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  color: #9507ce;
+  font-weight: 100;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+
+.section-title {
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
+}
+
+.player-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  background-color:#141414;
+  border: #9507ce solid 1px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.rank {
+  font-weight: bold;
+  color: white;
+  font-weight: 100;
+  width: 25px;
+}
+
+.player-info {
+  flex-grow: 1;
+  color: white;
+  font-weight: 100;
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.score {
+  font-weight: bold;
+  font-weight: 100;
+  color: white;
+}
+
+
+.rules-list {
+  list-style: none;
+  padding-left: 0;
+  text-transform: none !important;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 100;
+}
+
+.rules-list li {
+  margin: 8px 0;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 100;
+  text-transform: none !important;
+}
+
+
+.divider {
+  height: 2px;
+  background-color: #9507ce;
+  margin-top: 2px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1024px) {
+  .lobby-header h1 {
+    font-size: 38px;
+  }
+  
+  p {
+    font-size: 34px;
+  }
+  
+  .action-btn {
+    font-size: 20px;
+    padding: 6px 14px;
+  }
+  
+  .room-input {
+    width: 220px;
+    height: 37px;
+    font-size: 1.2rem;
+  }
+  
+  .section-title {
+    font-size: 30px;
+  }
+  
+  .player-info {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .lobby-header h1 {
+    font-size: 32px;
+  }
+  
+  p {
+    font-size: 28px;
+  }
+  
+  .action-btn {
+    font-size: 18px;
+  }
+  
+  .room-input {
+    width: 200px;
+    height: 37px;
+  }
+  
+  .section-title {
+    font-size: 26px;
+  }
+  
+  .player-info {
+    font-size: 16px;
+  }
+  
+  .rules-list li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lobby-container {
+    padding: 15px;
+  }
+  
+  .lobby-header h1 {
+    font-size: 28px;
+  }
+  
+  p {
+    font-size: 24px;
+  }
+  
+  .top-center-actions {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  
+  .action-btn {
+    width: 100%;
+    text-align: center;
+    margin: 0 !important;
+  }
+  
+  .room-input {
+    width: 100%;
+    font-size: 1rem;
+    margin: 1px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  
+  .error-message {
+    font-size: 20px;
+  }
+  
+  .section-title {
+    font-size: 22px;
+  }
+  
+  .player-info {
+    font-size: 14px;
+  }
+  
+  .content-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .lobby-header h1 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+  
+  .action-btn {
+    font-size: 16px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .player-info {
+    font-size: 13px;
+  }
+}
