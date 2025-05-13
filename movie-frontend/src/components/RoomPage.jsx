@@ -195,11 +195,11 @@ const handleCreateRoom = () => {
           <div className="divider"></div>
          <ul className="rules-list" style={{ textTransform: "none" }}>
         <li>Points are awarded based on difficulty: <span style={{ color: "green" }}>Easy</span> = 1 point, <span style={{ color: "yellow" }}>Medium</span> = 2 points, <span style={{ color: "red" }}>Hard</span> = 3 points.</li>
-        <li>A 15-second timer is set for each question.</li>
+        <li>A 12-second timer is set for each question.</li>
         <li>The game begins once both players have joined the room and clicked <span style={{ color: "orange" }}>Ready</span>.</li>
         <li>The leaderboard displays the top players, with total scores added after each game.</li>
         <li>Questions are sourced from a predefined list of movies.</li>
-        <li>There may be some delay between questions due to API latency, so please have some pateince.</li>
+        <li>There may be some delay between questions due to API latency, so please have some patience.</li>
        <li>Room ID must be manually copied and pasted. Future updates may include an auto-copy feature.</li>
 
       </ul>

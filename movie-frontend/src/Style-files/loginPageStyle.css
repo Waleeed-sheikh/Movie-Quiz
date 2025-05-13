@@ -52,7 +52,7 @@ body {
 
 .hero h1 {
   font-size: clamp(1.8rem, 5vw, 3.2rem);
-  color:  #9507ce;
+  color:  rgb(74 108 255);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.5px;
@@ -64,7 +64,7 @@ body {
 
 
 .auth-card {
-  background: #9507ce;
+  background: rgb(74 108 255);
 ;
   border-radius: 8px;
   padding: clamp(1.5rem, 4vw, 2rem);
@@ -128,18 +128,18 @@ body {
   font-size: 20px;
   transition: all 0.3s ease;
   background-color: #141414;
-  color:  #9507ce;
+  color:  rgb(74 108 255);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .input-field input::placeholder {
   font-family: 'Bebas Neue', sans-serif;
-  color: #9507ce; 
+  color: rgb(74 108 255); 
 }
 .input-field input:focus {
   outline: none;
   border-color: black;
   background-color: #141414;
-  box-shadow: 0 0 0 2px #43025c;
+  box-shadow: 0 0 0 2px rgb(74 108 255);
 }
 
 
@@ -168,7 +168,7 @@ body {
   width: 100%;
   
   background: #141414;
-  color:  #9507ce;
+  color:  rgb(74 108 255);
   border: none;
  
   font-weight: 500;
@@ -185,7 +185,7 @@ body {
 }
 
 .primary-btn:hover {
-  background:  #9507ce;
+  background:  rgb(74 108 255);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(3, 1, 1, 0.4);
   border: solid black 1px;
@@ -224,10 +224,13 @@ body {
 
 .error {
   border-left: 3px solid red;
+   font-weight: 100;
 }
 
 .success {
   border-left: 3px solid #73e509;
+  color: #73e509;
+  font-weight: 100;
 }
 
 .auth-switch {
@@ -252,7 +255,7 @@ body {
 .primary-btn:disabled {
   cursor: not-allowed;
   background: #141414;
-  color:  #9507ce;
+  color:  rgb(74 108 255);
 }
 
 .button-processing {
@@ -265,17 +268,17 @@ body {
 .spinner {
   width: clamp(12px, 2vw, 20px);
   height: clamp(12px, 2vw, 20px);
-  border: 2px solid  #9507ce;
+  border: 2px solid  rgb(74 108 255);
   border-radius: 50%;
   border-top-color: #141414;
   animation: spin 1s ease-in-out infinite;
 }
 
 .icons{
-  width: 21px;
+  width: 22px;
   align-items: center;
   display: flex;
-  background-color: #9507ce;
+  background-color: rgb(74 108 255);
   border-radius: 50%;
   
 }

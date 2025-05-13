@@ -1,48 +1,43 @@
 /* Game.css */
-body{
-    background-color:black;
+body {
+  background-color: black;
 }
 
 .game-container {
-
   width: 600px;
   max-width: 1300px;
   min-height: 460px;
- margin: 5px auto 40px auto;
+  margin: 5px auto 40px;
   padding: 40px;
   background-color: black;
   border-radius: 12px;
-  color: #9507ce;
-  border: solid #9507ce 1px;
+  color: rgb(74 108 255);
+  border: solid rgb(74 108 255) 1px;
   overflow: hidden;
   transition: width 0.5s ease-in-out, padding 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
-
 
 .game-container.game-started {
   width: 900px;
   padding: 40px 60px;
 }
 
+/* Fade-in panel */
 .fade-in {
   animation: fadeIn 0.5s ease-in;
-  background-color:black;
+  background-color: black;
   padding: 20px;
   border-radius: 20px;
-  border:#9507ce solid 1px
+  border: rgb(74 108 255) solid 1px;
 }
-
-
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-
 
 .copy-message {
   color: lightgreen;
@@ -52,7 +47,6 @@ body{
   border: none;
 }
 
-
 .question-text {
   font-size: 2rem;
   line-height: 1.6;
@@ -60,26 +54,20 @@ body{
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 100;
   margin-bottom: 3px;
-  min-height: 120px; 
+  min-height: 120px;
   width: 100%;
-  
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 25px;
-
-  
   overflow: visible;
 }
-
-
 
 .center-text {
   text-align: center;
   margin-bottom: 25px;
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 100;
-  
 }
 
 .error-text {
@@ -100,11 +88,11 @@ body{
 }
 
 .section h2 {
-  border-bottom: 2px solid #9507ce;
-  padding-bottom: 8px;
+  border-bottom: 2px solid rgb(74 108 255);
+  padding-bottom: 3px;
   margin-bottom: 13px;
-   font-family: 'Bebas Neue', sans-serif;
-   font-weight: 100;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 100;
 }
 
 ul {
@@ -116,25 +104,21 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; 
-  padding: 6px 10px;
+  width: 100%;
+  padding: 6px 5px;
   font-weight: 500;
-  color: #9507ce;
+  color: rgb(74 108 255);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 22px;
   margin-bottom: 8px;
   background-color: transparent;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
-
-
-
 .ready-button {
-  background: #9507ce;
+  background: rgb(74 108 255);
   padding: 12px 25px;
   font-size: 1.6rem;
-  border: solid black 1px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -142,23 +126,21 @@ ul {
   margin: 19px auto;
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 100;
-   transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-
-.ready-button:hover{
-    background:black;
-    color: #9507ce;
-    border: solid #9507ce 1px ;
-    transform: translateY(-5px);
+.ready-button:hover {
+  background: black;
+  color: rgb(74 108 255);
+  border: solid rgb(74 108 255) 1px;
+  transform: translateY(-5px);
 }
 
 .ready-status {
   text-align: center;
   font-size: 15px;
   background-color: black;
-  border:#9507ce solid 1px;
+  border: rgb(74 108 255) solid 1px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
- 
   padding: 10px;
   border-radius: 8px;
   margin: 20px 0;
@@ -167,11 +149,10 @@ ul {
 .countdown {
   font-size: 1.8rem;
   text-align: center;
-  color: rgb(25, 142, 177);
+  color: rgb(170, 217, 15);
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 100;
   margin-bottom: 30px;
-  
 }
 
 .progress-bar-container {
@@ -194,7 +175,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  
 }
 
 .question-header {
@@ -202,13 +182,12 @@ ul {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1px;
- font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-weight: 100;
-  
 }
 
 .difficulty-label {
-    font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .timer-label {
@@ -216,17 +195,10 @@ ul {
   font-weight: bold;
 }
 
-
-
 .options-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  
-}
-.game-container.game-started {
-  height: auto; 
-  padding: 40px 30px;
 }
 
 .option-button {
@@ -238,17 +210,16 @@ ul {
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Bebas Neue', sans-serif;
-  
 }
 
 .option-default {
-  color: #9507ce;
-  background-color:black;
-  border: #9507ce solid 1px;
+  color: rgb(74 108 255);
+  background-color: black;
+  border: rgb(74 108 255) solid 1px;
 }
 
 .option-selected {
-  background-color:#9507ce;
+  background-color: rgb(74 108 255);
   color: black;
 }
 
@@ -261,8 +232,9 @@ ul {
   background-color: #d32f2f;
   color: white;
 }
+
 .copy-btn {
-  background:#9507ce;
+  background: rgb(74 108 255);
   border: none;
   padding: 0;
   cursor: pointer;
@@ -272,22 +244,117 @@ ul {
 }
 
 .copy-btn .img {
-  width: 25px; 
+  width: 25px;
   height: 25px;
   transition: transform 0.2s ease;
-
 }
-
 .copy-btn .img:hover {
-  transform: scale(1.3); 
+  transform: scale(1.3);
 }
 
-  .question-number{
- font-size: 2.5rem;
-  font-weight: 500;
+.question-number {
+  font-size: 2.5rem;
+  font-weight: 100;
   margin: 10px 0;
   line-height: 1.6;
   text-align: center;
- font-family: 'Bebas Neue', sans-serif;
-  font-weight: 100;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+
+
+@media (max-width: 1024px) {
+  .game-container {
+    width: 90%;
+    padding: 30px;
   }
+  .game-container.game-started {
+    width: 95%;
+    padding: 30px 40px;
+  }
+  .options-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+/* Landscape phones & small tablets */
+@media (max-width: 768px) {
+  .game-container {
+    width: 95%;
+    padding: 25px;
+  }
+  .game-container.game-started {
+    padding: 25px 30px;
+  }
+
+  .flex-space {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .question-text {
+    font-size: 1.8rem;
+    padding: 0 15px;
+  }
+  .question-number {
+    font-size: 2rem;
+  }
+  .timer-label {
+    font-size: 6rem;
+  }
+  .option-button {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  .ready-button {
+    font-size: 1.4rem;
+    padding: 10px 20px;
+  }
+  .player-item {
+    font-size: 20px;
+    padding: 6px 8px;
+  }
+}
+
+/* Narrow phones */
+@media (max-width: 480px) {
+  .game-container {
+    padding: 20px 10px;
+  }
+  .game-container.game-started {
+    padding: 20px 15px;
+  }
+  .question-text {
+    font-size: 1.6rem;
+    padding: 0 10px;
+  }
+  .question-number {
+    font-size: 1.8rem;
+  }
+  .timer-label {
+    font-size: 4rem;
+  }
+  .option-button {
+    font-size: 1.3rem;
+    padding: 8px;
+  }
+  .ready-button {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 8px 16px;
+  }
+  .section h2 {
+    font-size: 1.4rem;
+    padding-bottom: 5px;
+  }
+  .player-item {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 18px;
+    padding: 6px 5px;
+    gap: 4px;
+  }
+  .copy-message {
+    font-size: 1.6rem;
+  }
+}

@@ -179,7 +179,7 @@ function GamePage() {
   const startQuestionTimer = () => {
     setAnsweredPlayers([]);
     clearInterval(timerRef.current);
-    setTimeRemaining(10);
+    setTimeRemaining(12);
 
     timerRef.current = setInterval(() => {
       setTimeRemaining((prev) => {
@@ -261,7 +261,7 @@ return (
     {scores.map((player, index) => (
       <li key={index} className="player-item">
             <span className="player-name">{player.userName}:   </span>  
-            <span className="player-score" style={{marginLeft:"5px"}}>  {player.score}  pts</span>
+            <span className="player-score" style={{}}>  {player.score}  pts</span>
             </li>
 
     ))}

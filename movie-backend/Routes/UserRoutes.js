@@ -41,7 +41,7 @@ userRouter.post("/login",async (req,res)=>{
             return res.status(400).json({message:"Invalid Password!"})
         }
 
-        const token=jwt.sign({id:user._id,username:user.userName},"SECRET-KEY",{expiresIn:"6h"})
+        const token=jwt.sign({id:user._id,username:user.userName},"SECRET-KEY",{expiresIn:"30d"})
         res.status(200).json({token,userName:user.userName,message:"Logged In Successfully!"})
     }
     catch(error){

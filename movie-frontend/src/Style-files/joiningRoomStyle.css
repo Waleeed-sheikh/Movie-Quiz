@@ -5,11 +5,11 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background: #141414;
+  background: black;
   box-sizing: border-box;
   overflow: hidden;
   border-radius: 8px;
-  border: solid #9507ce 1px;
+  border: solid rgb(74 108 255) 1px;
 }
 
 
@@ -20,7 +20,7 @@
 
 .lobby-header h1 {
   margin-bottom: 10px;
-  color: #9507ce;
+  color: rgb(74 108 255);
   font-family: 'Bebas Neue', sans-serif;
   font-size: 45px;
 }
@@ -29,7 +29,7 @@ p {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 40px;
   font-weight: 200;
-  color: #9507ce;
+  color:rgb(74 108 255);
 }
 
 
@@ -55,7 +55,7 @@ p {
 }
 
 .action-btn:hover {
-  background-color: #9507ce;
+  background-color: rgb(74 108 255);
   border: solid black 1px;
   color: #141414;
   transform: translateY(-4px);
@@ -65,15 +65,15 @@ p {
 
 .create-btn {
   background-color: #141414;
-  color: #9507ce;
-  border: solid #9507ce 1px;
+  color: rgb(74 108 255);
+  border: solid rgb(74 108 255) 1px;
   margin-right: 10px;
 }
 
 .join-btn {
   background-color: #141414;
-  border: solid #9507ce 1px;
-  color: #9507ce;
+  border: solid rgb(74 108 255) 1px;
+  color: rgb(74 108 255);
   margin-left: 5px;
 }
 
@@ -86,8 +86,8 @@ p {
   font-family: 'Bebas Neue', sans-serif;
   height: 44px;
   background-color: #141414;
-  color: #9507ce;
-  border: #9507ce solid 1px;
+  color: rgb(74 108 255);
+  border: rgb(74 108 255) solid 1px;
   font-size: 1.4rem;
 }
 
@@ -95,7 +95,7 @@ p {
   border: #141414 solid 2px;
   outline: none;
   color: #141414;
-  background-color: #9507ce;
+  background-color: rgb(74 108 255);
 }
 
 .room-input:focus::placeholder {
@@ -125,12 +125,12 @@ p {
 .content-card {
   background: #141414;
   border-radius: 12px;
-  border: #9507ce solid 0.5px;
+  border: rgb(74 108 255) solid 0.5px;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  color: #9507ce;
+  color: rgb(74 108 255);
   font-weight: 100;
   font-family: 'Bebas Neue', sans-serif;
 }
@@ -159,7 +159,7 @@ p {
   align-items: center;
   font-weight: 500;
   background-color:#141414;
-  border: #9507ce solid 1px;
+  border: rgb(74 108 255) solid 1px;
   padding: 8px 12px;
   border-radius: 8px;
 }
@@ -205,7 +205,7 @@ p {
 
 .divider {
   height: 2px;
-  background-color: #9507ce;
+  background-color: rgb(74 108 255);
   margin-top: 2px;
   margin-bottom: 15px;
 }

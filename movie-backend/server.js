@@ -12,8 +12,8 @@ import axios from "axios";
 import jwt from "jsonwebtoken";
 
 const SECRET_key = "SECRET-KEY";
-const MAX_QUESTIONS = 10;
-const QUESTION_TIME = 10000;
+const MAX_QUESTIONS = 12;
+const QUESTION_TIME = 12000;
 
 const app = express();
 const server = createServer(app);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import socket from "../sockets";
+import { jwtDecode } from "jwt-decode"; 
 import "../Style-files/loginPageStyle.css";
 import show from "../icons/visible.png";
 import user from "../icons/user.png";
@@ -77,6 +78,27 @@ function Login() {
       return () => clearTimeout(timer);
     }
   }, [error]);
+
+   useEffect(() => {
+        const token = localStorage.getItem("TimerToken");
+        
+        if (token) {
+            try {
+                const decoded = jwtDecode(token); 
+                if (decoded.exp * 1000 < Date.now()) {
+                    
+                    localStorage.removeItem("TimerToken");
+                    localStorage.removeItem("Username");
+                    navigate("/login");
+                }
+            } catch (error) {
+                
+                localStorage.removeItem("TimerToken");
+                localStorage.removeItem("Username");
+                navigate("/login");
+            }
+        }
+    }, [navigate]);
 
   async function handleSignUp(e) {
     e.preventDefault();
