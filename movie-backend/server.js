@@ -14,8 +14,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const SECRET_key = "SECRET-KEY";
-const MAX_QUESTIONS = 2;
-const QUESTION_TIME = 10000;
+const MAX_QUESTIONS = 12;
+const QUESTION_TIME = 12000;
 
 const app = express();
 const server = createServer(app);
