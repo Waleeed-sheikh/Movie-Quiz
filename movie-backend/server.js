@@ -10,16 +10,21 @@ import questionRouter from "./Routes/QuestionRoutes.js";
 import leaderBoardRouter from "./Routes/LeaderboardRoute.js";
 import axios from "axios";
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
 
 const SECRET_key = "SECRET-KEY";
-const MAX_QUESTIONS = 12;
-const QUESTION_TIME = 12000;
+const MAX_QUESTIONS = 2;
+const QUESTION_TIME = 10000;
 
 const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173", // Local frontend
+      "https://Waleeywood.netlify.app/", // Deployed frontend
+    ],
     methods: ["GET", "POST"],
   },
 });
