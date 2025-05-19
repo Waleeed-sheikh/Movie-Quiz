@@ -19,17 +19,28 @@ const QUESTION_TIME = 12000;
 
 const app = express();
 const server = createServer(app);
+
 const io = new Server(server, {
   cors: {
     origin: [
-      "http://localhost:5173", // Local frontend
-      "https://Waleeywood.netlify.app/", // Deployed frontend
+      "http://localhost:5173",
+      "https://waleeywood.netlify.app"
     ],
     methods: ["GET", "POST"],
+    credentials: true
   },
 });
 
-app.use(cors());
+
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://waleeywood.netlify.app"
+  ],
+  methods: ["GET", "POST"],
+  credentials: true
+}));
+
 app.use(express.json());
 
 connectDB();
