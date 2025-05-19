@@ -316,7 +316,7 @@ const fetchMovieQuestion = async (roomId) => {
     }
 
     const response = await axios.get(
-      "http://localhost:5000/questions/getMovieQuestions"
+      "https://movie-quiz-sgki.onrender.com/questions/getMovieQuestions"
     );
 
     room.questionCount++;
